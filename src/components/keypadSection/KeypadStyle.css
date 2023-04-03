@@ -1,0 +1,18 @@
+.keypad{
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: hsl(223, 31%, 20%);
+}
+
+.keypad_numbers{
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.keypad_special{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 1rem;
+}

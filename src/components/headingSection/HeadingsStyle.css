@@ -1,0 +1,13 @@
+.topic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topic_name {
+    font-size: 1.5rem;
+}
+
+.topic_setting {
+    display: flex;
+    font-size: 0.8rem;
+}
