@@ -1,6 +1,7 @@
 import React from "react";
 import "./ButtonStyle.css";
 export default function CustomButton(props) {
+  const newStyle = props.buttonStyle;
   return (
     <button
       name={props.text}
@@ -8,20 +9,20 @@ export default function CustomButton(props) {
       style={{
         backgroundColor:
           props.text === "DEL" || props.text === "RESET"
-            ? "hsl(225, 21%, 49%)"
+            ? newStyle.keyBackgroundSpecialsDelReset
             : props.text === "="
-            ? "hsl(6, 63%, 50%)"
-            : "hsl(30, 25%, 89%)",
+            ? newStyle.keyBackgroundEqualsToggle
+            : newStyle.keyBackgroundNormal,
         boxShadow:
           props.text === "DEL" || props.text === "RESET"
-            ? "0 3px 0 hsl(224, 28%, 35%)"
+            ? newStyle.keyShadowDelReset
             : props.text === "="
-            ? "0 3px 0 hsl(6, 70%, 34%)"
-            : "0 3px 0 hsl(28, 16%, 65%)",
+            ? newStyle.keyShadowEqualsToggle
+            : newStyle.keyShadowNormal,
         color:
           props.text === "DEL" || props.text === "RESET" || props.text === "="
-            ? "hsl(0, 0%, 100%)"
-            : "hsl(221, 14%, 31%)",
+            ? newStyle.delResetEqualText
+            : newStyle.normalText,
       }}
       onClick={props.clickEvent}
     >

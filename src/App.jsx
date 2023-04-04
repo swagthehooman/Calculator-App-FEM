@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ResultScreen from "./components/resultSection/ResultScreen";
 import Headings from "./components/headingSection/Headings";
 import Keypad from "./components/keypadSection/Keypad";
 import { evaluate, round } from "mathjs";
+import { themeTypes } from "./themeFile";
 import "./App.css";
 
 function App() {
   const [result, setResult] = useState("0");
+  const [theme, setTheme] = useState(0);
 
   function handleClick(event) {
     var buttonType = event.target.name;
@@ -46,11 +48,23 @@ function App() {
     }
   }
 
+  function handleThemeChange(event) {
+    setTheme(event.target.value);
+  }
+
   return (
-    <main>
-      <Headings />
-      <ResultScreen text={result} />
-      <Keypad keyFunction={handleClick} />
+    <main style={{ backgroundColor: themeTypes.themes[theme].backgroundMain }}>
+      <div className="calculator">
+        <Headings
+          handleRadio={handleThemeChange}
+          customStyle={themeTypes.themes[theme]}
+        />
+        <ResultScreen text={result} customStyle={themeTypes.themes[theme]} />
+        <Keypad
+          keyFunction={handleClick}
+          customStyle={themeTypes.themes[theme]}
+        />
+      </div>
     </main>
   );
 }
