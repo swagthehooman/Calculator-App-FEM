@@ -10,5 +10,50 @@
 .topic_setting {
     display: flex;
     font-size: 0.8rem;
-    align-items: center;
+    align-items: end;
+    gap: 0.7rem;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.setting{
+    width: 80px;
+    padding: 0.4rem 0 0.4rem 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    /* visibility: visible; */
+    /* border: 2px solid white; */
+}
+    
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    /* border: 2px solid white; */
 }
