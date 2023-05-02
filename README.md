@@ -9,4 +9,4 @@ This is a [Frontend Mentor]() challenge. In this challenge, a simple arithmetic 
 
 ## Deployment site
 Netlify
-(Site preview) (https://swagthehooman-calculator-fem.netlify.app/)
+[Site preview](https://swagthehooman-calculator-fem.netlify.app/)
