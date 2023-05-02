@@ -6,3 +6,7 @@ This is a [Frontend Mentor]() challenge. In this challenge, a simple arithmetic 
 1) React.js
 2) [Math.js](https://mathjs.org/)
 3) [Math expression evaluator](https://www.npmjs.com/package/math-expression-evaluator)
+
+## Deployment site
+Netlify
+(Site preview) (https://swagthehooman-calculator-fem.netlify.app/)
